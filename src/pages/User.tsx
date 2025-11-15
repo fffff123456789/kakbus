@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
+import { signOut } from "firebase/auth";
+import { auth } from "@/lib/firebase";
+import { toast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
+import { useCallback } from "react";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
@@ -76,6 +81,10 @@ const User = () => {
               </Button>
             </div>
 
+            <div className="flex justify-center mt-6">
+              <SignOutButton />
+            </div>
+
             <p className="text-sm text-muted-foreground text-center mt-8">
               Full account management features coming soon
             </p>
@@ -87,3 +96,23 @@ const User = () => {
 };
 
 export default User;
+
+function SignOutButton() {
+  const navigate = useNavigate();
+  const onSignOut = useCallback(async () => {
+    try {
+      await signOut(auth);
+      toast({ title: "Signed out", description: "You have been signed out." });
+      navigate('/');
+    } catch (err) {
+      console.error('Sign out failed', err);
+      toast({ title: 'Sign out failed', description: String(err) });
+    }
+  }, [navigate]);
+
+  return (
+    <Button variant="destructive" onClick={onSignOut}>
+      Sign out
+    </Button>
+  );
+}
