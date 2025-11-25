@@ -39,7 +39,7 @@ const Products = () => {
                 </h3>
                 
                 <p className="text-muted-foreground mb-6 flex-grow">
-                  Innovative low-power toolkit designed for the next generation of builders. Revolutionary technology meets elegant design.
+                  low power local usb based on NAS
                 </p>
                 
                 <Button 

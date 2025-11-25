@@ -5,16 +5,19 @@ import iconDeveloper from "@/assets/icon-developer.png";
 
 const highlights = [
   {
-    title: "Low power, high impact",
-    icon: iconLightning,
-  },
-  {
-    title: "Modern UX by default",
+    title: "Instagram",
     icon: iconUx,
+    url: "https://www.instagram.com/kakbus_offc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
   },
   {
-    title: "Built for developers",
+    title: "Discord",
     icon: iconDeveloper,
+    url: "https://discord.gg/zWHvyreB",
+  },
+  {
+    title: "LinkedIn",
+    icon: iconLightning,
+    // LinkedIn URL not available yet; leave undefined so we show a placeholder
   },
 ];
 
@@ -40,9 +43,21 @@ const HighlightCards = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">
-                  {highlight.title}
-                </h3>
+                <h3 className="text-2xl font-bold text-foreground">{highlight.title}</h3>
+                {highlight.url ? (
+                  <a
+                    href={highlight.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-block px-4 py-2 rounded-md bg-foreground text-background font-medium hover:opacity-90"
+                  >
+                    Visit {highlight.title}
+                  </a>
+                ) : (
+                  <span className="mt-4 inline-block px-4 py-2 rounded-md bg-muted text-muted-foreground font-medium opacity-70">
+                    {highlight.title} (coming soon)
+                  </span>
+                )}
               </div>
             </motion.div>
           ))}
