@@ -146,7 +146,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </a>
 
                 <a
-                  href="https://discord.gg/your-invite"
+                  href="https://discord.gg/nCUj8E6R"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Discord"

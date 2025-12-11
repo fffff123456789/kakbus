@@ -12,7 +12,7 @@ const highlights = [
   {
     title: "Discord",
     icon: iconDeveloper,
-    url: "https://discord.gg/zWHvyreB",
+    url: "https://discord.gg/nCUj8E6R",
   },
   {
     title: "LinkedIn",
