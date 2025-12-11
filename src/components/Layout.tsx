@@ -132,7 +132,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               {/* Social icons: Instagram, Discord, LinkedIn */}
               <div className="flex items-center gap-3">
                 <a
-                  href="https://instagram.com/kakbus"
+                  href="https://www.instagram.com/terrabus369/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
@@ -158,7 +158,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/company/kakbus"
+                  href="https://www.linkedin.com/company/kakbus/?viewAsMember=true"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"

@@ -7,7 +7,7 @@ const highlights = [
   {
     title: "Instagram",
     icon: iconUx,
-    url: "https://www.instagram.com/kakbus_offc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+    url: "https://www.instagram.com/terrabus369/",
   },
   {
     title: "Discord",
@@ -17,7 +17,7 @@ const highlights = [
   {
     title: "LinkedIn",
     icon: iconLightning,
-    // LinkedIn URL not available yet; leave undefined so we show a placeholder
+    url: "https://www.linkedin.com/company/kakbus/?viewAsMember=true",
   },
 ];
 
