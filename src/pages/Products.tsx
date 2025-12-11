@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Github } from "lucide-react";
 
-const Products = () => {
+const Projects = () => {
   return (
     <Layout>
       <div className="min-h-screen py-20">
@@ -14,14 +14,14 @@ const Products = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">Products</h1>
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-4">Projects</h1>
             <p className="text-xl text-muted-foreground mb-16">
               Next-generation tools built for the future
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Gypsy Product Card */}
+            {/* Gypsy Project Card */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -61,7 +61,7 @@ const Products = () => {
                   <Button 
                     disabled 
                     className="flex-1 opacity-50 cursor-not-allowed"
-                    title="Product not available yet"
+                    title="Project not available yet"
                   >
                     Not Available Yet
                   </Button>
@@ -69,7 +69,7 @@ const Products = () => {
               </div>
             </motion.div>
 
-            {/* Placeholder Product Cards */}
+            {/* Placeholder Project Cards */}
             {[1, 2, 3, 4].map((item, index) => (
               <motion.div
                 key={item}
@@ -91,7 +91,7 @@ const Products = () => {
                   </h3>
                   
                   <p className="text-muted-foreground mb-6 flex-grow">
-                    More innovative products are on the way. Stay tuned for updates.
+                    More innovative projects are on the way. Stay tuned for updates.
                   </p>
                   
                   <Button 
@@ -111,4 +111,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default Projects;

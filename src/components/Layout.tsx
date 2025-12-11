@@ -46,14 +46,14 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 Home
               </Link>
               <Link
-                to="/products"
+                to="/projects"
                 className={`px-6 py-2 rounded-lg font-semibold transition-all ${
-                  isActive("/products")
+                  isActive("/projects")
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-muted"
                 }`}
               >
-                Products
+                Projects
               </Link>
               {/* Removed User link from center nav — replaced by Sign in / Sign up buttons on the right */}
             </div>
@@ -121,8 +121,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
                 <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Home
                 </Link>
-                <Link to="/products" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Products
+                <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Projects
                 </Link>
                 <Link to="/user" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   User

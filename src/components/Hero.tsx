@@ -39,9 +39,9 @@ const Hero = () => {
             
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
-              <Link to="/products">
+              <Link to="/projects">
                 <Button size="lg" className="bg-gradient-button text-white hover:scale-105 transition-transform font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl">
-                  Explore Products
+                  Explore Projects
                 </Button>
               </Link>
               
