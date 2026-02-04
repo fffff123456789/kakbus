@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 import iconLightning from "@/assets/icon-lightning.png";
 import iconUx from "@/assets/icon-ux.png";
 import iconDeveloper from "@/assets/icon-developer.png";
@@ -23,9 +24,9 @@ const highlights = [
 
 const HighlightCards = () => {
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 lg:py-24 bg-background">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-10">
           {highlights.map((highlight, index) => (
             <motion.div
               key={index}
@@ -35,26 +36,27 @@ const HighlightCards = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="group"
             >
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <div className="w-16 h-16 mb-6 flex items-center justify-center">
+              <div className="bg-card border border-border rounded-xl p-8 lg:p-9 shadow-sm transition-all duration-200 group-hover:shadow-md group-hover:-translate-y-1">
+                <div className="w-14 h-14 mb-6 flex items-center justify-center">
                   <img 
                     src={highlight.icon} 
                     alt={highlight.title} 
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground">{highlight.title}</h3>
+                <h3 className="text-xl lg:text-2xl font-bold text-foreground">{highlight.title}</h3>
                 {highlight.url ? (
-                  <a
-                    href={highlight.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-block px-4 py-2 rounded-md bg-foreground text-background font-medium hover:opacity-90"
-                  >
-                    Visit {highlight.title}
-                  </a>
+                  <Button size="sm" variant="secondary" asChild className="mt-4 font-semibold">
+                    <a
+                      href={highlight.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit {highlight.title}
+                    </a>
+                  </Button>
                 ) : (
-                  <span className="mt-4 inline-block px-4 py-2 rounded-md bg-muted text-muted-foreground font-medium opacity-70">
+                  <span className="mt-4 inline-flex items-center h-9 px-4 rounded-lg bg-muted text-muted-foreground font-medium opacity-70">
                     {highlight.title} (coming soon)
                   </span>
                 )}
