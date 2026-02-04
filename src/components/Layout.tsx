@@ -21,15 +21,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-        <div className="container mx-auto px-6 py-4">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/85 backdrop-blur-md border-b border-border shadow-sm">
+        <div className="container mx-auto px-6 py-3 lg:py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link to="/" className="flex-shrink-0">
               <img 
                 src={kakbusLogo} 
                 alt="Kakbus" 
-                className="h-8 w-auto transition-transform hover:scale-105"
+                className="h-8 w-auto transition-transform duration-200 hover:scale-[1.03]"
               />
             </Link>
             
@@ -37,20 +37,20 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex items-center gap-2">
               <Link
                 to="/"
-                className={`px-6 py-2 rounded-lg font-semibold transition-all ${
+                className={`h-10 px-5 inline-flex items-center rounded-lg text-sm font-semibold transition-colors ${
                   isActive("/")
                     ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
+                    : "text-foreground hover:bg-muted/80"
                 }`}
               >
                 Home
               </Link>
               <Link
                 to="/projects"
-                className={`px-6 py-2 rounded-lg font-semibold transition-all ${
+                className={`h-10 px-5 inline-flex items-center rounded-lg text-sm font-semibold transition-colors ${
                   isActive("/projects")
                     ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-muted"
+                    : "text-foreground hover:bg-muted/80"
                 }`}
               >
                 Projects
@@ -104,13 +104,13 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
       </nav>
       
       {/* Main Content */}
-      <main className="flex-1 pt-20">
+      <main className="flex-1 pt-24">
         {children}
       </main>
       
       {/* Footer */}
       <footer className="border-t border-border bg-muted/30">
-        <div className="container mx-auto px-6 py-6">
+        <div className="container mx-auto px-6 py-8">
           <div className="flex items-center justify-between">
             <p className="text-sm text-muted-foreground">
               © 2025 Kakbus. Built for tomorrow's builders.
