@@ -2,7 +2,8 @@ import { motion } from "framer-motion";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Github } from "lucide-react";
+import { Github, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   return (
@@ -48,6 +49,16 @@ const Projects = () => {
                     asChild
                     className="flex-1"
                   >
+                    <Link to="/projects/gypsy" className="flex items-center justify-center gap-2">
+                      <BookOpen className="w-4 h-4" />
+                      Documentation
+                    </Link>
+                  </Button>
+                  <Button 
+                    asChild
+                    variant="outline"
+                    className="flex-1"
+                  >
                     <a
                       href="https://github.com/Gypsy-Server/Gypsyv0"
                       target="_blank"
@@ -55,15 +66,8 @@ const Projects = () => {
                       className="flex items-center justify-center gap-2"
                     >
                       <Github className="w-4 h-4" />
-                      GitHub Repo
+                      GitHub
                     </a>
-                  </Button>
-                  <Button 
-                    disabled 
-                    className="flex-1 opacity-50 cursor-not-allowed"
-                    title="Project not available yet"
-                  >
-                    Not Available Yet
                   </Button>
                 </div>
               </div>
